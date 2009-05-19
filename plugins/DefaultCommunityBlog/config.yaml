@@ -1,0 +1,15 @@
+name: Default Community Blog
+key: DefaultCommunityBlog
+id: defaultcommunityblog
+version: 1.0
+description: Provides the config directive "DefaultCommunityBlog" for setting the blog ID of the default blog to use for community actions
+author_name: Jay Allen, Endevver Consulting
+author_link: http://endevver.com
+doc_link: https://trac.endevver.com/movabletype/wiki/code/defaultcommunityblog
+
+callbacks:
+    MT::App::Community::init_request: $DefaultCommunityBlog::DefaultCommunityBlog::community_init_request
+
+config_settings:
+    DefaultCommunityBlog:
+        default: 0
